@@ -1,0 +1,121 @@
+body {
+  font-family: "Vazir", Tahoma, sans-serif;
+  background: #f3ede3;
+  color: #333;
+  line-height: 1.8;
+  margin: 0;
+  direction: rtl;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #004d40, #00796b);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 5px solid #00796b;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.3rem;
+}
+header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  opacity: 0.95;
+}
+
+/* Container */
+.container-t {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: justify;
+}
+
+/* تصاویر */
+.figure {
+  margin: 25px 0;
+  text-align: center;
+  background: #f9faf9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+}
+.figure img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+}
+
+/* تیترها */
+h2 {
+  color: #00796b;
+  border-right: 4px solid #004d40;
+  padding-right: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* بخش‌های مرحله‌ای */
+.stage {
+  margin: 20px 0;
+  background: #e0f2f1;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.stage h3 {
+  color: #004d40;
+  margin-bottom: 8px;
+}
+
+/* نکات یا باکس توضیحی */
+.note {
+  background: #e0f2f1;
+  border-right: 4px solid #004d40;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 20px 0;
+  color: #004d40;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  background: #004d40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 5px solid #00796b;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.9rem;
+  }
+  .container-t {
+    margin: 25px 10px;
+    padding: 15px;
+  }
+  .figure img {
+    max-width: 100%;
+  }
+}
