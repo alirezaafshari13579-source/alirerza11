@@ -1,3 +1,35 @@
+.settings-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: none; /* پس‌زمینه شفاف */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.settings-icon img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.settings-icon:hover {
+  transform: scale(1.1);
+}
+
+.settings-icon:hover img {
+  transform: rotate(90deg);
+}
+
+
 /* Reset ساده */
 * {
   box-sizing: border-box;
@@ -134,6 +166,75 @@ footer a {
 footer a:hover {
   text-decoration: none; /* حتی هنگام هاور خط نیفته */
   color: inherit;        /* رنگ همون متن بمونه */
+}
+.settings-menu {
+  position: fixed;
+  top: 85px; /* کمی پایین‌تر از آیکون */
+  right: 20px;
+  text-align: right;
+  width: 220px;
+  background: #f3ede3;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  padding: 15px;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none; /* وقتی بسته است غیرقابل کلیک */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 999;
+}
+
+.settings-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.settings-menu h3 {
+  margin-top: 0;
+  color: #004d40;
+  border-bottom: 2px solid #00796b;
+  padding-bottom: 5px;
+}
+
+.settings-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settings-menu li {
+  margin: 12px 0;
+}
+
+.settings-menu li a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #004d40;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* افکت هاور */
+.settings-menu li a:hover {
+  background: #00796b; /* سبز دلنشین */
+  color: #fff;         /* تغییر رنگ متن */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateX(3px); /* کمی حرکت نرم */
+}
+
+/* انیمیشن باز شدن منو */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive adjustments */

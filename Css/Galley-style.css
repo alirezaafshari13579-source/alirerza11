@@ -1,0 +1,18 @@
+footer {
+  background: linear-gradient(135deg, #004d40, #00796b);
+  color: #fff;
+  text-align: center;
+  padding: 28px 20px;
+  margin-top: 60px;
+}
+footer a {
+  color: inherit;       /* رنگ همون متن فوتر */
+  text-decoration: none; /* خط زیر لینک برداشته می‌شود */
+  font-weight: normal;   /* می‌تونی اگه میخوای سبک‌تر یا پررنگ‌ترش کنی */
+  cursor: pointer;       /* اگه بخوای نشانگر موس تغییر کنه */
+}
+
+footer a:hover {
+  text-decoration: none; /* حتی هنگام هاور خط نیفته */
+  color: inherit;        /* رنگ همون متن بمونه */
+}

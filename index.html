@@ -7,16 +7,26 @@
   <link rel="stylesheet" href="Css/style.css" />
 </head>
 <body class="back">
+  <div class="settings-icon" id="settingsBtn">
+    <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="تنظیمات" />
+  </div>
+
+
+  <div class="settings-menu" id="settingsMenu">
+    <h3>تنظیمات</h3>
+    <ul>
+        <li><a href="index.html">خانه</a></li>
+        <li><a href="#about-us">درباره ما</a></li>
+        <li><a href="Html/Gallery.html">گالری</a></li>
+        <li><a href="tel:+989334669754">تماس به ما</a></li>
+    </ul>
+  </div>
+
+
   <header>
     <h1>زمین‌شناسی</h1>
-    <p>کاوش در اعماق زمین و شناخت تاریخچه آن</p>
+      <p>کشف اسرار زمین و ساختارهای آن</p>
   </header>
-
-  <nav>
-    <a href="#" class="active">خانه</a>
-    <a href="#about">درباره ما</a>
-    <a href="#">گالری</a>
-  </nav>
 
   <main class="site-wrap">
     <section>
@@ -74,15 +84,37 @@
     </section>
   </main>
 
-  <footer>
+  <footer id="about-us">
     <p>© 2025 پروژه زمین‌شناسی</p>
+      <br>
     <p>
       <span>علیرضا افشاری</span> |
       <span>محمدجواد ملکی</span> |
       <span>علیرضا بابایی</span>
     </p>
+    <br>
+    <p>
+        <span>منابع : کتاب زمین شناسی یازدهم | ویکی پدیا | مقالات و نظریه های خارجی</span>
+    </p>
   </footer>
 
-  <!-- اسکریپت مرحله بعد (وقتی آماده شدیم، برای کلیک روی wilson-card لینک می‌زنیم) -->
+<script>
+  const settingsBtn = document.querySelector('.settings-icon');
+const settingsMenu = document.getElementById('settingsMenu');
+
+settingsBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // جلوگیری از بسته شدن بلافاصله
+  settingsMenu.classList.toggle('show');
+});
+
+// بستن وقتی بیرون کلیک شد
+document.addEventListener('click', (e) => {
+  if (!settingsMenu.contains(e.target) && !settingsBtn.contains(e.target)) {
+    settingsMenu.classList.remove('show');
+  }
+});
+
+</script>
+
 </body>
 </html>
