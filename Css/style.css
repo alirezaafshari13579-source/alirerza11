@@ -49,8 +49,8 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #004d40, #00796b);
-;
+ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('../Gallery/img_4.png') no-repeat center center/cover;;
   color: #fff;
   text-align: center;
   padding: 80px 20px;
